@@ -8,7 +8,11 @@ function App() {
       <Player />
       <div id="challenges">
         {TIMER_CHALLENGES_CONTENT.map(({ title, targetTime }) => (
-          <TimerChallenge title={title} targetTime={targetTime} />
+          <TimerChallenge
+            key={targetTime}
+            title={title}
+            targetTime={targetTime}
+          />
         ))}
       </div>
     </>
